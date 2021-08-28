@@ -1,1 +1,1 @@
-# Este es nuestro proyecto para HACKATON Monterrey 2021
+# Este es nuestro proyecto para HACKATHON Monterrey 2021
