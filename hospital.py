@@ -19,6 +19,7 @@ class Paciente:
         self.ala = ala
         self.hora_egreso = hora_egreso
         self.covid = covid
+        self.fecha = dt.date.today
     
     def covid_positive(self): #Si sale positivo de covid hacer esto
         self.covid = True
