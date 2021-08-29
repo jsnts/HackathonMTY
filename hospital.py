@@ -12,7 +12,7 @@ def format_time(x):
 #Input Nombre edad sexo y hora de ingreso
 class Paciente:
 
-    def __init__(self, nombre, edad, sexo, hora_ingreso, ala, hora_egreso = False, covid = False):
+    def __init__(self, nombre, edad, sexo, hora_ingreso, ala, hora_egreso = False, fecha = dt.date.today(), covid = False):
         self.nombre = nombre
         self.edad = edad
         self.sexo = sexo
@@ -20,7 +20,14 @@ class Paciente:
         self.ala = ala
         self.hora_egreso = hora_egreso
         self.covid = covid
-        self.fecha = dt.date.today
+        #esto hace que la fecha de todos los objetos sean Datetime, ya sea una fecha de antes o una fecha actual
+        if type(fecha) != type(dt.date.today()):
+            date = fecha
+            date = date.split("-")
+            date = list(map(int, date))
+            self.fecha = dt.date(date[0], date[1], date[2])
+        else:
+            self.fecha = fecha
     
     def covid_positive(self): #Si sale positivo de covid hacer esto
         self.covid = True
