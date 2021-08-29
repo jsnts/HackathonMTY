@@ -8,7 +8,8 @@ def time(x):
 
 
 date = f"{dt.date.today()}"
-
-date_object = dt.datetime.(date, "%Y-%m-%d")
+date = date.split("-")
+date = list(map(int, date))
+date_object = dt.date(date[0], date[1], date[2])
 
 print(date_object, type(date_object))

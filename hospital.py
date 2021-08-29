@@ -19,8 +19,14 @@ class Paciente:
         self.ala = ala
         self.hora_egreso = hora_egreso
         self.covid = covid
+        #esto hace que la fecha de todos los objetos sean Datetime, ya sea una fecha de antes o una fecha actual
         if type(fecha) != type(dt.date.today()):
-            self.fecha = 
+            date = fecha
+            date = date.split("-")
+            date = list(map(int, date))
+            self.fecha = dt.date(date[0], date[1], date[2])
+        else:
+            self.fecha = fecha
     
     def covid_positive(self): #Si sale positivo de covid hacer esto
         self.covid = True
@@ -34,7 +40,7 @@ class Paciente:
     
 lista_pacientes = []
 #checa los pacientes anteriores
-with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
+with open('HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
     reader = enumerate(csv.reader(f))
     for i, row in reader:
         if i > 0:
