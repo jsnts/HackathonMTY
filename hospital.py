@@ -38,12 +38,13 @@ class Paciente:
         self.egreso = format_time(self.egreso)
         
     
-lista_pacientes = []
+lista_pacientes_anteriores = []
 #checa los pacientes anteriores
-with open('HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
+with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
     reader = enumerate(csv.reader(f))
     for i, row in reader:
         if i > 0:
-            lista_pacientes.append(Paciente(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]))
+            lista_pacientes_anteriores.append(Paciente(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]))
             
 
+lista_pacientes_hoy = []
