@@ -54,7 +54,8 @@ with open('/Users/Omen/Desktop/github/HackMTY/HackathonMTY/Hospital In-Out Excel
         hora_egr = input("Por favor ingresa tu hora de salida: ")
         fecha = input("Por favor ingresa la fecha (dd-mm-AAAA): ")
         covid = input("Por favor ingresa si tiene covid: ")
-    myFile.writerow ([nombre, edad, sexo, hora_ing, ala, hora_egr, fecha, covid])
+        myFile.writerow ([nombre, edad, sexo, hora_ing, ala, hora_egr, fecha, covid])
+    
 
 with open('/Users/Omen/Desktop/github/HackMTY/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
     reader = enumerate(csv.reader(f))
