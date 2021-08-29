@@ -1,6 +1,7 @@
 import datetime as dt
 import csv
 
+
 pacientas_expuestos = {}
 
 def format_time(x):
@@ -11,7 +12,7 @@ def format_time(x):
 #Input Nombre edad sexo y hora de ingreso
 class Paciente:
 
-    def __init__(self, nombre, edad, sexo, hora_ingreso, ala, hora_egreso = False, fecha = dt.date.today(), covid = False):
+    def __init__(self, nombre, edad, sexo, hora_ingreso, ala, hora_egreso = False, covid = False):
         self.nombre = nombre
         self.edad = edad
         self.sexo = sexo
@@ -19,8 +20,7 @@ class Paciente:
         self.ala = ala
         self.hora_egreso = hora_egreso
         self.covid = covid
-        if type(fecha) != type(dt.date.today()):
-            self.fecha = 
+        self.fecha = dt.date.today
     
     def covid_positive(self): #Si sale positivo de covid hacer esto
         self.covid = True
@@ -33,11 +33,12 @@ class Paciente:
         
     
 lista_pacientes = []
-#checa los pacientes anteriores
-with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
+with open('/Users/Omen/Desktop/github/HackMTY/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', 'r', newline='') as f:
     reader = enumerate(csv.reader(f))
     for i, row in reader:
         if i > 0:
-            lista_pacientes.append(Paciente(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]))
+            lista_pacientes.append(Paciente(row[0], row[1], row[2], row[3], row[4], row[5], row[6]))
             
+            
+print(lista_pacientes)
 
