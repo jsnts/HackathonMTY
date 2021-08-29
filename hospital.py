@@ -56,14 +56,14 @@ with open('/Users/Omen/Desktop/github/HackMTY/HackathonMTY/Hospital In-Out Excel
     myFile.writerow(["Nombre", "Edad", "Sexo", "Hora de Ingreso", "ala", "Hora de Egreso", "Fecha", "Covid"])
     noOfpatients = int(input("Cuantos pacientes va a ingresar: "))
     for i in range(noOfpatients):
-        nombre = input("Por favor ingresa tu nombre: ")
-        edad = input("Por favor ingresa tu edad: ")
-        sexo = input("Por favor ingresa tu sexo: ")
-        hora_ing = input("Por favor ingresa la hora a la que entro: ")
-        ala = input("Por favor ingresa el ala en la que estaba: ")
-        hora_egr = input("Por favor ingresa tu hora de salida: ")
-        fecha = input("Por favor ingresa la fecha (dd-mm-AAAA): ")
-        covid = input("Por favor ingresa si tiene covid: ")
+        nombre = input("Paciente " + str(i + 1) + "Por favor ingresa tu nombre: ")
+        edad = input("Paciente " + str(i + 1) + "Por favor ingresa tu edad: ")
+        sexo = input("Paciente " + str(i + 1) + "Por favor ingresa tu sexo: ")
+        hora_ing = input("Paciente " + str(i + 1) + "Por favor ingresa la hora a la que entro: ")
+        ala = input("Paciente " + str(i + 1) + "Por favor ingresa el ala en la que estaba: ")
+        hora_egr = input("Paciente " + str(i + 1) + "Por favor ingresa tu hora de salida: ")
+        fecha = input("Paciente " + str(i + 1) + "Por favor ingresa la fecha (dd-mm-AAAA): ")
+        covid = input("Paciente " + str(i + 1) + "Por favor ingresa si tiene covid: ")
         myFile.writerow ([nombre, edad, sexo, hora_ing, ala, hora_egr, fecha, covid])
     
 
