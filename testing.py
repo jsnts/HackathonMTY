@@ -52,3 +52,8 @@ with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel -
     file_.write(f"\n{obj.nombre}, {obj.edad}, {obj.sexo}, {obj.hora_ingreso}, {obj.ala}, {obj.hora_egreso},{obj.fecha}, {obj.covid}")
     
     
+
+
+hora = dt.date.today()
+
+print(f"{hora:%d de %B, del %Y}")    

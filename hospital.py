@@ -32,8 +32,13 @@ class Paciente:
     def covid_positive(self): #Si sale positivo de covid hacer esto
         self.covid = True
         #pacientas_expuestos.append(self)
-            
     
+    def info(self):
+        if 's' in self.covid or 'S' in self.covid:
+            self.covid = 'Positivo'
+        else:
+            self.covid = "Negativo"
+        print(f"Paciente {self.nombre}, con {self.edad} años de edad. Probo {self.covid} para la prueba de COVID-19. Entro a las {self.hora_ingreso} y salio a las {self.hora_egreso} el dia {self.fecha: %d de %B, del %Y}")
     def salida(self): 
         self.hora_ingreso = format_time(self.hora_ingreso)
         self.egreso = format_time(self.egreso)
