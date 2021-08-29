@@ -8,7 +8,7 @@ def format_time(x):
         return hora
     
 #Input Nombre edad sexo y hora de ingreso
-class Paciente():
+class Paciente:
 
     def __init__(self, nombre, edad, sexo, hora_ingreso, ala, hora_egreso = False, covid = False):
         self.nombre = nombre
@@ -24,11 +24,8 @@ class Paciente():
         #pacientas_expuestos.append(self)
             
     
-    def egreso(self): 
+    def salida(self): 
         self.hora_ingreso = format_time(self.hora_ingreso)
         self.egreso = format_time(self.egreso)
         
-    
-    
-    
     
