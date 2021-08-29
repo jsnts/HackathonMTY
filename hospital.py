@@ -56,7 +56,7 @@ with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel -
 
 lista_pacientes = []
 
-with open('/Users/Omen/Desktop/github/HackMTY/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', "w+", newline="") as f:
+with open('/Users/Alberto/Desktop/HACKATHON/HackathonMTY/Hospital In-Out Excel - Hoja 1.csv', "w+", newline="") as f:
     myFile = csv.writer(f)
     myFile.writerow(["Nombre", "Edad", "Sexo", "Hora de Ingreso", "ala", "Hora de Egreso", "Fecha", "Covid"])
     noOfpatients = int(input("Cuantos pacientes va a ingresar: "))
